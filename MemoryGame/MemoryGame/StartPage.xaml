@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoryGame.StartPage">
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="DarkGreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <FlexLayout Direction="Column" AlignItems="Center" JustifyContent="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4">
+                <Label Text="Memory Booster" FontSize="52" TextColor="White"/>
+            </FlexLayout>
+
+            <FlexLayout Direction="Column" JustifyContent="Center" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                <Button x:Name="play_button" Text="Play" FontSize="Title" HeightRequest="100" CornerRadius="15" Margin="10" Clicked="Button_Clicked"/>
+                <Button Text="Exit" FontSize="Title" HeightRequest="100" CornerRadius="15" Margin="10" Clicked="Button_Clicked_1"/>
+            </FlexLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

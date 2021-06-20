@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoryGame.MemoryCards">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ImageButtonStyle" TargetType="ImageButton">
+                <Setter Property="Source" Value="Image"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        
+        <Grid x:Name="mainGrid" BackgroundColor="DarkGreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <FlexLayout Grid.Column="0" Grid.Row="0" AlignContent="End" AlignItems="Center" JustifyContent="SpaceBetween" Direction="Row" Margin="10,0">
+                <Button Text="quit" FontSize="Subtitle" Clicked="Button_Clicked"/>
+                <Label x:Name="label_time" Text="0:00" FontSize="36" TextColor="White"/>
+            </FlexLayout>
+            
+            <Grid x:Name="cellsGrid" Grid.Column="0" Grid.Row="1" Grid.RowSpan="10" Margin="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <ImageButton x:Name="ImageButton_00" Style="{StaticResource ImageButtonStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_01" Style="{StaticResource ImageButtonStyle}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_02" Style="{StaticResource ImageButtonStyle}" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_03" Style="{StaticResource ImageButtonStyle}" Grid.Row="1" Grid.Column="0" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_04" Style="{StaticResource ImageButtonStyle}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_05" Style="{StaticResource ImageButtonStyle}" Grid.Row="1" Grid.Column="2" HorizontalOptions="Start" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_06" Style="{StaticResource ImageButtonStyle}" Grid.Row="2" Grid.Column="0" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_07" Style="{StaticResource ImageButtonStyle}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_08" Style="{StaticResource ImageButtonStyle}" Grid.Row="2" Grid.Column="2" HorizontalOptions="Start" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_09" Style="{StaticResource ImageButtonStyle}" Grid.Row="3" Grid.Column="0" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_10" Style="{StaticResource ImageButtonStyle}" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_11" Style="{StaticResource ImageButtonStyle}" Grid.Row="3" Grid.Column="2" HorizontalOptions="Start" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_12" Style="{StaticResource ImageButtonStyle}" Grid.Row="4" Grid.Column="0" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_13" Style="{StaticResource ImageButtonStyle}" Grid.Row="4" Grid.Column="1" HorizontalOptions="Center" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_14" Style="{StaticResource ImageButtonStyle}" Grid.Row="4" Grid.Column="2" HorizontalOptions="Start" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_15" Style="{StaticResource ImageButtonStyle}" Grid.Row="5" Grid.Column="0" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_16" Style="{StaticResource ImageButtonStyle}" Grid.Row="5" Grid.Column="1" HorizontalOptions="Center" Clicked="ImageButton_Clicked"/>
+                <ImageButton x:Name="ImageButton_17" Style="{StaticResource ImageButtonStyle}" Grid.Row="5" Grid.Column="2" HorizontalOptions="Start" Clicked="ImageButton_Clicked"/>
+
+            </Grid>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
